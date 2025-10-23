@@ -22,7 +22,7 @@ object TransferMethodFactory : ContractMethodFactory {
             val address = Address.fromRawWithoutPrefix(inputArguments.copyOfRange(12, 32))
             val value = inputArguments.copyOfRange(32, 64).toBigInteger()
 
-            return TransferMethod("", BigInteger("0"))
+            return TransferMethod(address, BigInteger("0"))
         }
     }
 
