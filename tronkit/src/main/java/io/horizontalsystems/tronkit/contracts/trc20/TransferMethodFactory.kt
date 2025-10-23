@@ -20,8 +20,6 @@ object TransferMethodFactory : ContractMethodFactory {
         } catch (e: Exception) {
             e.printStackTrace()
             val address = Address.fromRawWithoutPrefix(inputArguments.copyOfRange(12, 32))
-            val value = inputArguments.copyOfRange(32, 64).toBigInteger()
-
             return TransferMethod(address, BigInteger("0"))
         }
     }
